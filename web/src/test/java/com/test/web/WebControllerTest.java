@@ -29,4 +29,13 @@ public class WebControllerTest {
         String str = mockMvc.perform(MockMvcRequestBuilders.post("/getUsers")).andReturn().getResponse().getContentAsString();
         System.out.println("result :" + str);
     }
+
+    @Test
+    public void saveUser() throws Exception {
+        mockMvc.perform(MockMvcRequestBuilders.post("/saveUser")
+                .param("name","")
+                .param("age","666")
+                .param("pass","test"));
+
+    }
 }
