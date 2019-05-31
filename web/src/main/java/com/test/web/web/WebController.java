@@ -19,7 +19,7 @@ public class WebController {
         return user;
     }
 
-    @RequestMapping(value = "/getUsers",method = RequestMethod.POST)
+    @RequestMapping(value = "/getUsers",method = RequestMethod.GET)
     public List<User> getUsers(){
         List<User> users = new ArrayList<User>();
         User user1 = new User("test1",18,"pass");
